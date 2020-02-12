@@ -1,8 +1,8 @@
-# Ask user for number
-# Loop question so that it repeats until valid number is entered
-# Make code recyclable
+# Lucky Unicorn Decomp Part 1
+# Get initial amount and check that its valid
 
-# function goes here
+
+# Integer checking function
 def intcheck(question, low, high):
     valid = False
     while not valid:
@@ -22,5 +22,4 @@ def intcheck(question, low, high):
 
 # main code
 
-num_1 = intcheck("Enter a number between 1 and 300", 1, 300)
-num_2 = intcheck("Enter a number between 60 and 550", 60, 550)
+how_much = intcheck("How much money do you want to play with? ", 1, 10)
