@@ -36,3 +36,6 @@ print("# Zebra / Horses: {}".format(zh_count))
 print("# Donkeys: {}".format(donk_count))
 
 print()
+print("You spent ${}".format(HOW_MUCH))
+print("You go home with ${}".format(winnings))
+
