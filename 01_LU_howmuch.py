@@ -1,4 +1,4 @@
-# Lucky Unicorn Decomp Part 1
+# Lucky Unicorn Decomposition Part 1
 # Get initial amount and check that its valid
 
 
