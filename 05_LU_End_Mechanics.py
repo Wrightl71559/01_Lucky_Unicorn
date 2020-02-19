@@ -8,8 +8,8 @@
 
 # Assume starting amount is $10
 total = int(input("How much would you like to play with? "))
-keep_going = " "
-while keep_going == " ":
+keep_going = ""
+while keep_going == "":
 
     # Allow manual token input for testing purposes
     token = input("enter a token: ")
@@ -26,11 +26,12 @@ while keep_going == " ":
         feedback = "Sorry, you've lost 50c"
 
     print()
-    print (feedback)
+
+    print(feedback)
     print("you have ${:.2f} to play with".format(total))
 
     if total < 1:
-        print("Sorry, you don't have enough money to continue. Game over"
+        print("Sorry, you don't have enough money to continue. Game over")
         keep_going = "end"
     else:
         keep_going = input("Press <enter> to play again or any key to quit")
