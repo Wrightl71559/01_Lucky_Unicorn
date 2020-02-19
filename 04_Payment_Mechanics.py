@@ -22,10 +22,11 @@ if token == "unicorn":
     feedback = "Congratulations you won $5.00"
 elif token == "donkey":
     total -= 1
-    feedback = "Sorry, you lost $1.00"
+    feedback = "Sorry, you did not win anything this round"
 else:
     total -= 0.5
-    feedback = "Sorry, you lost 50c"
+    feedback = "Sorry, you've lost 50c"
 
 print()
 print (feedback)
+print("you have ${:.2f} to play with".format(total))
