@@ -5,10 +5,9 @@
 # Integer checking function
 def intcheck(question, low, high):
     valid = False
+    error = "Whoops! please enter an integer"
     while not valid:
-        error = "Whoops! please enter an integer"
-
-        try:
+       try:
             response = int(input("Enter an integer between {} and {}  ".format(low, high)))
 
             if low <= response <= high:
@@ -21,5 +20,6 @@ def intcheck(question, low, high):
             print()
 
 # main code
+
 
 how_much = intcheck("How much money do you want to play with? ", 1, 10)

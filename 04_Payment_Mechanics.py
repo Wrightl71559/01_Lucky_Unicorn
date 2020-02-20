@@ -25,7 +25,7 @@ elif token == "donkey":
     feedback = "Sorry, you did not win anything this round"
 else:
     total -= 0.5
-    feedback = "Sorry, you've lost 50c"
+    feedback = "You've won 50c"
 
 print()
 print (feedback)
