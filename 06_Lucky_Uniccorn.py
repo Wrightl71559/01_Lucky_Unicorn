@@ -19,16 +19,7 @@ def intcheck(question, low, high):
            print(error)
 
 # Introduction
-print("** Welcome to the Lucky Unicorn game **")
-print()
-print("To play: Enter an amount of money between $1 & $10")
-print()
-print("It costs $1 per round")
-print("payouts..."
-      "- Unicorn: +$5.00"
-      "- Horse / zebra: -$0.50"
-      "- Donkey: -$1.00")
-print()
+
 # main code
 
 # Ask user how much they want to play with (min $1, max $10)
