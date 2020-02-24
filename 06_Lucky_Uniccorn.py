@@ -10,6 +10,7 @@ def intcheck(question, low, high):
     while not valid:
        try:
             response = int(input(question))
+
             if low <= response <= high:
                 return response
             else:
