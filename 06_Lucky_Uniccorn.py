@@ -4,6 +4,8 @@
 import random
 
 # Integer checking function below
+
+
 def intcheck(question, low, high):
     valid = False
     error = "Whoops! please enter an integer"
@@ -19,12 +21,42 @@ def intcheck(question, low, high):
        except ValueError:
            print(error)
 
+# function to format responses based on token won
+
+
+def token_statement(statement, char):
+    print()
+    print(char*len(statement))
+    print(statement)
+    print(char*len(statement))
+    print
+
+# Cost payout constants
+COST = 1    #cost per round
+UNICORN = 5
+ZEB_HOR = 0.5
+DONKEY = 0 # STUFF ISNT RIGHT HERE
+
+
 # Introduction
+print("** Welcome to the Lucky Unicorn Game **")
+print()
+print("To play, enter an amount of money between $1 & $10(whole dollars only)")
+print()
+print("It costs $1 per round")
+print()
+print("Payouts: ")
+print("-Unicorn: +$5.00")
+print("- Horse / Zebra: -$0.50")
+print("-Donkey: -$1.00")
+
 
 # main code
 
 # Ask user how much they want to play with (min $1, max $10)
 balance = intcheck("How much money would you like to play with? $", 1, 10)
+
+print("** GAME STARTING **")
 
 keep_going = ""
 while keep_going == "":
