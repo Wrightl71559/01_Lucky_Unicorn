@@ -29,26 +29,19 @@ def token_statement(statement, char):
     print(char*len(statement))
     print(statement)
     print(char*len(statement))
-    print
-
-# Cost payout constants
-COST = 1    #cost per round
-UNICORN = 5
-ZEB_HOR = 0.5
-DONKEY = 0 # STUFF ISNT RIGHT HERE
 
 
 # Introduction
 print("** Welcome to the Lucky Unicorn Game **")
 print()
-print("To play, enter an amount of money between $1 & $10(whole dollars only)")
+print("* To play, enter an amount of money between $1 & $10(whole dollars only) *")
 print()
-print("It costs $1 per round")
+print("* It costs $1 per round *")
 print()
-print("Payouts: ")
-print("-Unicorn: +$5.00")
-print("- Horse / Zebra: -$0.50")
-print("-Donkey: -$1.00")
+print("* Payouts: *")
+print("* -Unicorn: +$5.00 *")
+print("* - Horse / Zebra: -$0.50 *")
+print("* -Donkey: -$1.00 *")
 
 
 # main code
@@ -56,6 +49,7 @@ print("-Donkey: -$1.00")
 # Ask user how much they want to play with (min $1, max $10)
 balance = intcheck("How much money would you like to play with? $", 1, 10)
 
+print()
 print("** GAME STARTING **")
 
 keep_going = ""
@@ -69,22 +63,21 @@ while keep_going == "":
     # Randomly choose a token from our list above
     token = random.choice(tokens)
     print()
-    print("you got a {}.".format(token))
 
     # Adjust toal correctly for a given token
     if token == "unicorn":
         balance += 5    # wins $5
-        feedback = "Congratulations you won $5.00"
+        token_statement("**** Congratulations it's a Unicorn!! You won $5.00 ****", "*")
     elif token == "donkey":
         balance -= 1    # loses $1
-        feedback = "Sorry, you did not win anything this round"
+        token_statement("--- Sorry, it's a Donkey. You did not win anything this round ---", "-")
     else:
         balance -= 0.5  # wins / loses 50c
-        feedback = "You've won 50c"
+        token_statement("<<< Nearly. It's a {}. You won back 50c >>>".format(token), "^")
 
     print()
-    print (feedback)
-    print("you have ${:.2f} to play with".format(balance))
+    print("You have ${:.2f} left to play with".format(balance))
+    print()
 
     # If user has enough money to play, ask if they want to play again
     if balance < 1:
