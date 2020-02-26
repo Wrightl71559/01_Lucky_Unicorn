@@ -1,4 +1,4 @@
-# Lucky unicorn decomposition sdtep 2
+# Lucky unicorn decomposition step 2
 # Generate random tokens
 
 

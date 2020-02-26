@@ -15,7 +15,7 @@ def intcheck(question, low, high):
             else:
                 print("That number isn't between {} and {}!".format(low, high))
                 print()
-        except ValueError:
+       except ValueError:
             print(error)
             print()
 

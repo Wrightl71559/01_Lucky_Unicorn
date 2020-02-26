@@ -1,5 +1,5 @@
-# Lucky unicorn decomposition sdtep 2
-# Generate random tokens
+# Lucky unicorn decomposition step 3
+# payout calculator
 
 
 

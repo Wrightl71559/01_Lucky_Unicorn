@@ -1,5 +1,6 @@
 # Lucky Unicorn fully working program
 # Program should work - needs to be usability tested
+# has been usability tested
 
 import random
 
@@ -64,7 +65,7 @@ while keep_going == "":
     token = random.choice(tokens)
     print()
 
-    # Adjust toal correctly for a given token
+    # Adjust total correctly for a given token
     if token == "unicorn":
         balance += 5    # wins $5
         token_statement("**** Congratulations it's a Unicorn!! You won $5.00 ****", "*")
