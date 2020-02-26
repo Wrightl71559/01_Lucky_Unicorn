@@ -39,9 +39,9 @@ print()
 print("* It costs $1 per round *")
 print()
 print("* Payouts: *")
-print("* -Unicorn: +$5.00 *")
+print("* - Unicorn: +$5.00 *")
 print("* - Horse / Zebra: -$0.50 *")
-print("* -Donkey: -$1.00 *")
+print("* - Donkey: -$1.00 *")
 
 
 # main code
