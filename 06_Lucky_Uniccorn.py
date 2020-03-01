@@ -53,7 +53,7 @@ print()
 print("** GAME STARTING **")
 
 keep_going = ""
-while keep_going == "":
+while keep_going == "" and balance > 1:
 
     # Tokens list includes 10 items to prevent too many unicorns being chosen
     tokens = ["horse", "horse", "horse",
@@ -75,16 +75,15 @@ while keep_going == "":
         balance -= 0.5  # wins / loses 50c
         token_statement("<<< Nearly. It's a {}. You won back 50c >>>".format(token), "^")
 
-    print()
-    print("You have ${:.2f} left to play with".format(balance))
-    print()
 
     # If user has enough money to play, ask if they want to play again
-    if balance < 1:
-        print("Sorry, you don't have enough money to continue. Game over")
-        keep_going = "end"
+    if balance == 0:
+        print("Sorry, you have run out of money. Game over")
+    elif balance < 1:
+        print("Sorry, your balance is ${:.2f} which is not enough to play another round".format(balance))
     else:
-        keep_going = input("Press <enter> to play again or any key to quit")
+        keep_going = input("You have ${:.2f} left to play with\n"
+                           "Press <enter> to play again or any key to quit".format(balance))
 
 # Farewell user at end of game.
 print("Thank you for playing :)")
